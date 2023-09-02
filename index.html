@@ -11,65 +11,71 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <img src="./multimedia/logos/Logo InstaVet a Color Con Fondo Blanco.png" alt="logo_instavet" class="logo">
-
-        <div>
-            <form action="" class="search-bar">
-                <input type="text" placeholder="Buscar" name="q">
-                <button type="submit"><img src="./multimedia/searchbar/busqueda.png" alt="lupa"></button>
-            </form>
-        </div>
-
-        <ul class="enlaces-navbar">
-            
-            <li> <a href="./index.html" class="active"> Inicio</a> </li>
-            <li> <a href="./pages/catalogo.html"> Catálogo</a> </li>
-            <li> <a href="./pages/planes_salud.html"> Servicios</a> </li>
-            <li> <a href="./pages/cuenta.html"> Mi Cuenta</a> </li>
-
-        </ul>
-
-
-
-
-    </nav>
+  
     <header>
-        <div id="carousel_instavet" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel_instavet" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel_instavet" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel_instavet" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     
+        <nav class="navegacion">
 
+            <img src="./multimedia/logos/InstaVet logo lateral.png" alt="logo_instavet" class="logo">
+
+            <div class="container">
+                <form action="" class="search-bar">
+                    <input type="text" placeholder="Buscar" name="q">
+                    <button type="submit"><img src="./multimedia/searchbar/busqueda.png" alt="lupa"></button>
+                </form>
             </div>
+    
+
+            <ul class="menu">
+                <div class="caja">
+                    <li> <a href="./index.html" class="enlace">Inicio</a> </li>
+                </div>
+                <div class="caja">
+                     <li> <a href="./pages/planes_salud.html" class="enlace">Servicios</a> </li>
+                </div>
+                <div class="caja">
+                    <li> <a class="enlace" href="./pages/catalogo.html">Catálogo</a> 
+                      <ul class="submenu">
+                       <li><a href="#">Categoria1</a></li>
+                       <li><a href="#">Categoria2</a></li>
+                       <li><a href="#">Categoria3</a></li>
+                      </ul>
+                    </li>
+                </div>
+                <div class="caja">
+                    <li> <a href="./pages/cuenta.html" class="enlace">Mi Cuenta</a> </li>
+                </div>
+            </ul>
+            <img src="./multimedia/searchbar/carrito-de-compras.png" class="carrito">
+        </nav>
+
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./multimedia/slides_carrusel/SarnaEnPerros.jpg" class="d-block w-100" alt="Imagen1">
-                </div>
-                <div class="carousel-item">
-                    <img src="./multimedia/slides_carrusel/SuperPromo1.jpg" class="d-block 
-                    w-100" alt="Imagen1">
-                </div>
-                <div class="carousel-item">
-                    <img src="./multimedia/slides_carrusel/Vacunacion.jpg" class="d-block 
-                    w-100" alt="Imagen1">
-                </div>
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./multimedia/slides_carrusel/doctor_chito.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./multimedia/slides_carrusel/doctora.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./multimedia/slides_carrusel/doctor_chito.svg" class="d-block w-100" alt="...">
+              </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_instavet" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel_instavet" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-        </div>
-
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </header>
     <main>
-
+       
     </main>
     <footer>
+        HOLA QUE HACE
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
