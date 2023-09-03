@@ -74,7 +74,7 @@ header .navegacion .submenu {
   z-index: 10000;
   position: absolute;
   background: #f4f4f4;
-  width: 120%;
+  width: 150%;
   visibility: hidden;
   opacity: 0; /* El submenu se mantiene oculto*/
   transition: opacity 0.6s;
@@ -86,6 +86,7 @@ header .navegacion .submenu a {
   color: #686868;
   transition: all 0.3s;
   font-family: "Prompt", sans-serif;
+  font-size: 15px;
 }
 header .navegacion .submenu a:hover {
   color: #0e5a89;
@@ -123,6 +124,75 @@ header .navegacion .container .search-bar button img {
 #carouselExampleInterval img {
   width: 100%;
   height: auto;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+}
+body .titulo {
+  padding: 35px;
+  color: #393939;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+}
+body .container-items {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+body .container-items .item {
+  border-radius: 10px;
+  background-color: #f3f0ee;
+  width: 300px;
+  justify-items: center;
+}
+body .container-items .item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+body .container-items .item img {
+  max-width: 100%;
+  height: 175px;
+  object-fit: cover;
+  padding-left: 30px;
+  border-radius: 10px 10px 0 0;
+  transition: all 1.5s;
+  padding-top: 10px;
+}
+body .container-items .item .info-product {
+  padding: 20px 30px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  color: #314685;
+}
+body .container-items .item .info-product h2 {
+  font-size: 18px;
+  text-align: center;
+}
+body .container-items .item .info-product .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #393939;
+}
+body .container-items .item .info-product button {
+  border: none;
+  background: none;
+  background-color: #093f76;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+body .container-items .item .info-product button:hover {
+  background-color: #2caaea;
+}
+body .container-items .item:hover img {
+  transform: scale(0.9);
+}
+body .container-items .item figure {
+  overflow: hidden;
 }
 
 .footer {

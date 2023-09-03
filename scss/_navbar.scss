@@ -68,7 +68,7 @@ header{
             z-index: 10000;
             position:absolute;
             background:#f4f4f4;
-            width:120%;
+            width:150%;
             visibility: hidden;
             opacity:0; /* El submenu se mantiene oculto*/
             transition: opacity .6s;
@@ -79,6 +79,7 @@ header{
                 color:#686868;
                 transition: all 0.3s;
                 font-family: 'Prompt', sans-serif;
+                font-size: 15px;
                 &:hover{
                     color:#0e5a89;
                 }
