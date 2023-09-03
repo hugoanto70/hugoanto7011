@@ -1,3 +1,4 @@
+
 header{
     
     .navegacion{
@@ -52,7 +53,7 @@ header{
                 position:relative;
                 display: inline-block;
                 .enlace{
-                    font-family: 'Source Code Pro', monospace;
+                    
                     display: block;
                     padding: 15px 20px;
                     color:  inherit;
@@ -77,7 +78,7 @@ header{
                 padding:15px;
                 color:#686868;
                 transition: all 0.3s;
-                font-family: 'Source Code Pro', monospace;
+                font-family: 'Prompt', sans-serif;
                 &:hover{
                     color:#0e5a89;
                 }

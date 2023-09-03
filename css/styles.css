@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -63,7 +63,6 @@ header .navegacion .menu .caja li:hover .submenu {
   opacity: 1; /* Pasa el cursor y se visualiza el submenu */
 }
 header .navegacion .menu .caja li .enlace {
-  font-family: "Source Code Pro", monospace;
   display: block;
   padding: 15px 20px;
   color: inherit;
@@ -86,7 +85,7 @@ header .navegacion .submenu a {
   padding: 15px;
   color: #686868;
   transition: all 0.3s;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Prompt", sans-serif;
 }
 header .navegacion .submenu a:hover {
   color: #0e5a89;
@@ -144,7 +143,7 @@ header .navegacion .container .search-bar button img {
   padding: 0 15px;
 }
 .footer .container-foot .footer-row .footer-links .referencias {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Prompt", sans-serif;
   color: #4c4c4c;
   margin-bottom: 25px;
   font-weight: 300;
@@ -155,7 +154,7 @@ header .navegacion .container .search-bar button img {
 }
 .footer .container-foot .footer-row .footer-links ul {
   padding: 0px;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Prompt", sans-serif;
   list-style: none;
 }
 .footer .container-foot .footer-row .footer-links ul a {
@@ -166,7 +165,7 @@ header .navegacion .container .search-bar button img {
   margin-bottom: 15px;
   transition: all 0.3s ease;
   padding-bottom: 10px;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Prompt", sans-serif;
 }
 .footer .container-foot .footer-row .footer-links ul a:hover {
   color: #0e5a89;
