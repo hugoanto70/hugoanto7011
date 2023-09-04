@@ -54,6 +54,11 @@ body{
                         font-family: 'Prompt', sans-serif;
                     }
                 }
+                a{
+                    text-decoration: none;
+                    color:#03738C;
+                    cursor: pointer;
+                }
                 h2{
                     border-top: 1px solid rgba(0, 0, 0, 0.20);
                     font-size: 18px;
@@ -61,7 +66,9 @@ body{
                     text-align: center;
                     font-weight: 600;
                     font-family: 'Prompt', sans-serif;
+                        
                 }
+                
                 .price{
                     font-size:18px;
                     font-weight: 600;
@@ -72,6 +79,7 @@ body{
                     border:none;
                     background: none;
                     background-color:  #03738C ;
+                    border-radius: 10px;
                     color:#ffff;
                     padding: 5px 10px;
                     transition: all .3s;
