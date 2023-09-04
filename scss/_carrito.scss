@@ -4,8 +4,8 @@
     height:30px; 
     color:#093f76;
     position:relative;
-    top:20%;
-    right:50%;
+    top:10px;
+    right:70%;
     &:hover{
         cursor: pointer;
     }
@@ -36,7 +36,7 @@
         top:50px;
         right:0;
         background-color: white;
-        width:400px;
+        width:500px;
         z-index:1;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
         border-radius:10px;
@@ -59,7 +59,7 @@
                 justify-content: space-between;
                 flex:0.8;
                 .titulo-producto-carrito{
-                    font-size: 18px;
+                    font-size: 17px;
 
                 }
                 .precio-producto-carrito{
@@ -81,6 +81,7 @@
             padding:20px 0;
             gap:20px;
             h3{
+                padding-top: 10px;
                 font-size: 18px;
                 font-weight: 700;
             }
@@ -88,6 +89,13 @@
                 font-size: 18px;
                 font-weight: 900;
             }
+        }
+        .cart-empty{
+            padding:20px;
+            text-align: center;
+         }
+        .hidden{
+            display:none;
         }
     }
     .hidden-cart{
