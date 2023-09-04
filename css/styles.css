@@ -181,15 +181,18 @@
 .container-icon .container-cart-products .cart-product .info-cart-product .titulo-producto-carrito {
   font-size: 17px;
   color: #0e4d47;
+  font-family: "Prompt", sans-serif;
 }
 .container-icon .container-cart-products .cart-product .info-cart-product .precio-producto-carrito {
   font-weight: 700;
   font-size: 18px;
   margin-left: 10px;
+  font-family: "Prompt", sans-serif;
 }
 .container-icon .container-cart-products .cart-product .info-cart-product .cantidad-producto-carrito {
   font-weight: 400;
   font-size: 18px;
+  font-family: "Prompt", sans-serif;
 }
 .container-icon .container-cart-products .cart-total {
   display: flex;
@@ -203,10 +206,12 @@
   font-size: 18px;
   font-weight: 700;
   color: #0e4d47;
+  font-family: "Prompt", sans-serif;
 }
 .container-icon .container-cart-products .cart-total .total-pagar {
   font-size: 18px;
   font-weight: 800;
+  font-family: "Prompt", sans-serif;
 }
 .container-icon .container-cart-products .cart-empty {
   font-family: "Prompt", sans-serif;
@@ -281,6 +286,7 @@ body .container-items .item .info-product .precios .impuesto {
   padding-left: 9px;
   color: #787878;
   font-size: 12px;
+  font-family: "Prompt", sans-serif;
 }
 body .container-items .item .info-product h2 {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
