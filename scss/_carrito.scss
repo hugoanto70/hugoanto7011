@@ -2,7 +2,7 @@
 .carrito{
     width: 30px;
     height:30px; 
-    color:#093f76;
+    color:#03738C;
     position:relative;
     top:10px;
     right:70%;
@@ -12,13 +12,14 @@
 }
 
 .container-icon{
+    
     margin-top:10;
     position: relative;
     .count-products{
         position:absolute;
         top:50%;
         right:30%;
-        background-color: #2caaea ;
+        background-color: #03A696 ;
         color: white;
         width:20px;
         height:20px;
@@ -28,6 +29,7 @@
         border-radius:50%;
         #contador-productos{
             font-size:10px;
+            font-family: 'Prompt', sans-serif;
         }
        
     }
@@ -35,7 +37,7 @@
         position:absolute;
         top:50px;
         right:0;
-        background-color: white;
+        background-color: #F2F2F2;
         width:500px;
         z-index:1;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
@@ -44,7 +46,7 @@
             width:25px;
             height:25px;
             &:hover{
-                stroke:red;
+                stroke:rgb(176, 27, 27);
                 cursor: pointer;
             }
         }
@@ -60,6 +62,7 @@
                 flex:0.8;
                 .titulo-producto-carrito{
                     font-size: 17px;
+                    color:#0e4d47  ;
 
                 }
                 .precio-producto-carrito{
@@ -84,13 +87,15 @@
                 padding-top: 10px;
                 font-size: 18px;
                 font-weight: 700;
+                color:#0e4d47 ;
             }
             .total-pagar{
                 font-size: 18px;
-                font-weight: 900;
+                font-weight: 800;
             }
         }
         .cart-empty{
+            font-family: 'Prompt', sans-serif;
             padding:20px;
             text-align: center;
          }

@@ -6,7 +6,7 @@
     display:flex;
     justify-content: space-between;
     color:#393939;
-    background-color: #f3f0ee;
+    background-color: #F2F2F2;
     position: sticky;
     top:0;
     z-index: 10000;
@@ -32,7 +32,7 @@
         transition: background-size 0.3s, color 0.3s;
         height: 60px;
         &:hover{
-            background-color:  #2caaea   ;
+            background-color:  #03A696   ;
             background-size: 100% 0%;
             color:#f3f0ee ;
         }
@@ -44,7 +44,7 @@
             position:relative;
             display: inline-block;
             .enlace{
-                
+                font-family: 'Prompt', sans-serif;
                 display: block;
                 padding: 15px 20px;
                 color:  inherit;
@@ -72,7 +72,7 @@
             font-family: 'Prompt', sans-serif;
             font-size: 15px;
             &:hover{
-                color:#0e5a89;
+                color:#032859;
             }
         }
     }

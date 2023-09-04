@@ -1,27 +1,34 @@
 body{
-    font-family: 'Prompt', sans-serif;
+    background-color: #4ab2a865 ;
     .titulo{
         padding:35px;
-        color:#393939;
+        color:#033576;
         text-align: center;
         font-size: 35px;
         font-weight: 900;
+        font-family: 'Prompt', sans-serif;
     }
     .container-items{
-        
         margin-bottom: 30px;
         display:grid;
         grid-template-columns: repeat(4,1fr);
         gap:10px;
         justify-items: center;
+        
         .item{
             border-radius: 10px;
-            background-color: #f3f0ee;
+            background-color: #F2F2F2;
             width: 300px;
             justify-items: center;
             transition: all 0.3s;
+            &:hover .info-product button{
+                visibility: visible;
+                opacity: 1;
+                transition: opacity .6s;
+            }
             &:hover{
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+                
             }
             img{
                 max-width: 100%;
@@ -37,26 +44,42 @@ body{
                 line-height:2;
                 display:flex;
                 flex-direction: column;
-                color:#314685;
-                
+                color:#03738C;
+                .precios{
+                    display:flex;
+                    .impuesto{
+                        padding-left: 9px;
+                        color:#787878;
+                        font-size: 12px;
+                    }
+                }
                 h2{
+                    border-top: 1px solid rgba(0, 0, 0, 0.20);
                     font-size: 18px;
+                    padding-top: 10px;
                     text-align: center;
+                    font-weight: 600;
+                    font-family: 'Prompt', sans-serif;
                 }
                 .price{
                     font-size:18px;
                     font-weight: 600;
-                    color:#393939;
+                    color:#595858;
+                    font-family: 'Prompt', sans-serif;
                 }
                 button{
                     border:none;
                     background: none;
-                    background-color:  #093f76 ;
+                    background-color:  #03738C ;
                     color:#ffff;
                     padding: 5px 10px;
+                    transition: all .3s;
                     cursor:pointer;
+                    font-family: 'Prompt', sans-serif;
+                    visibility: hidden;
+                    opacity: 0;
                     &:hover{
-                        background-color: #2caaea ;
+                        background-color: #032859;
                     }
                 }
             }
@@ -67,6 +90,5 @@ body{
                 overflow:hidden;
             }
         }
-       
     }
 }
