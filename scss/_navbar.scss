@@ -37,6 +37,7 @@
             color:#f3f0ee ;
         }
         li{
+            text-decoration: none;
             &:hover .submenu{
                 visibility: visible;
                 opacity: 1; /* Pasa el cursor y se visualiza el submenu */

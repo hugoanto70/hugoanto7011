@@ -1,0 +1,176 @@
+.item-name{
+    display:flex;
+    align-items: center;
+    padding:30px;
+    justify-content: center;
+    h1{
+        font-family: 'Prompt', sans-serif;
+        color:#033576;
+        font-weight: 900;
+        font-size: 30px;
+    }
+}
+
+.container-title{
+    padding:30px;
+    background-color: #F2F2F2;
+    color:#03738C;
+    font-weight: 550;
+    font-size: 30px;
+    font-family: 'Prompt', sans-serif;
+}
+
+.item-content{
+    display:flex;
+    gap:30px;
+    background-color:  #F2F2F2;
+    padding-bottom: 90px;
+    .container-img{
+        flex: 1;
+        background-color: #317f912d;
+        border-radius: 10px;
+        img{
+            max-width: 100%;
+        }
+    }
+    .container-info-product{
+        flex:1;
+        display:flex;
+        flex-direction: column;
+        .container-price{
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+            display: flex;
+            align-items:center;
+            justify-content:space-between;
+            span{
+                font-size:24px;
+                font-weight: 300;
+                font-family: 'Prompt', sans-serif;
+                color:#595858;
+            }
+        }
+    }
+    .container-add-cart{
+        padding-top:20px;
+        display:flex;
+        gap:20px;
+        padding-bottom:30px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+        .container-quantity{
+            position:relative;
+            .btn-increment-decrement{
+                display:flex;
+                flex-direction: column;
+                position: absolute;
+                top:12px;
+                right:7px;
+                i{
+                    font-size:11px;
+                    color:#666;
+                    &:hover{
+                        color: #1bb;
+                        cursor:pointer;
+                    }
+                } 
+            }
+            .input-quantity{
+                background-color: #f7f7f7;
+                border:none;
+                padding:10px;
+                width:60px;
+                height:100%;
+                color:#666;
+                font-weight: 500;
+                font-family: 'Prompt', sans-serif;
+                &:focus{
+                    outline:none;
+                }
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button{
+                    -webkit-appearance:none;
+                    appearance: none;
+                }
+            }
+        }
+        .btn-add-to-cart{
+            border:none;
+            background-color:  #03738C ;
+            padding:10px;
+            color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:5px;
+            font-weight: 700;
+            font-family: 'Prompt', sans-serif;
+            border-radius: 10px;
+            transition: all .3s;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover{
+                background-color: #032859;
+            }
+        }
+    }
+    .container-social{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+        span{
+            font-family: 'Prompt', sans-serif;
+            font-weight: 500;
+            color:#03738C;
+            font-size: 18px;
+        }
+        .container-buttons-social{
+            display: flex;
+            gap:15px;
+            align-items: center;
+            a:link,
+            a:visited{
+                color:#666;
+                font-size:15px;
+                &:hover{
+                    color:#032859;
+                }
+            }
+        }
+
+    }
+    .container-description,
+    .container-additional-information{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+        padding:10px 0;
+        .title-description,
+        .title-additional-information{
+            font-family: 'Prompt', sans-serif;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            h4{
+                font-family: 'Prompt', sans-serif;
+                font-weight: 500;
+                color:#03738C;
+                font-size: 18px;
+            }
+            
+        }
+        .text-description,
+        .text-additional-information{
+            font-size:1;
+            color:#393939;
+            line-height: 22px;
+            margin-top:25px;
+            p{
+                font-family: 'Prompt', sans-serif;
+            }
+        }
+    }
+    
+}
