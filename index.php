@@ -1,3 +1,17 @@
+<?php 
+require "config/database.php";
+$dbm = new Database();
+$con = $dbm->conectar(); // Cambié $db a $dbm
+
+try {
+    $sql = $con->prepare("SELECT id, codigo_producto, nombre, precio FROM medicinas WHERE activo=1 order by nombre");
+    $sql->execute();
+    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,7 +104,7 @@
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="6000">
-                <img src="./multimedia/slides_carrusel/doctor_chito.svg" class="d-block w-100" alt="...">
+                <img src="./multimedia/slides_carrusel/instavet-banner.svg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="6000">
                 <img src="./multimedia/slides_carrusel/doctora.svg" class="d-block w-100" alt="...">
@@ -117,58 +131,29 @@
 
       <p class="titulo">Productos nuevos en InstaVet</p>
       <div class="container-items">
+        <?php foreach($resultado as $row){ ?>
         <div class="item">
+          <?php
+           $id = $row['id'];
+           $imagen = "./multimedia/medicinas/" .$id. "/principal.png";
+
+           if(!file_exists($imagen)){
+            $imagen= "./multimedia/nophoto.avif";
+           }
+          ?>
           <figure>
-            <img src="./multimedia/articulos-instavet/correa-cafe.png" alt="collar_pet_toys_n">
+            <img src="<?php echo $imagen; ?>">
           </figure>
           <div class="info-product">
-            <h2>Collar para Perro</h2>
+            <h2><?php echo $row['nombre'];?></h2>
             <div class="precios">
-              <p class="price">$5</p> 
+              <p class="price">$<?php echo $row['precio'];?></p> 
               <p class="impuesto">(Impuestos Incluidos)</p>
             </div>
             <button class="btn-add-cart">Añadir al carrito</button>
           </div>
         </div>
-        <div class="item">
-          <figure>
-            <img src="./multimedia/articulos-instavet/collar_pet_toys_verdeo.png" alt="collar_pet_toys_vo">
-          </figure>
-          <div class="info-product">
-            <h2>Collar Reflectivo para Gato</h2>
-            <div class="precios">
-              <p class="price">$2</p> 
-              <p class="impuesto">(Impuestos Incluidos)</p>
-            </div>
-            <button class="btn-add-cart">Añadir al carrito</button>
-          </div>
-        </div>
-        <div class="item">
-          <figure>
-            <img src="./multimedia/articulos-instavet/collar_perro_verde.png" alt="collar_pet_toys_a">
-          </figure>
-          <div class="info-product">
-            <a href="./pages/collar_topraw.html"><h2>Collar TOP PAW para Perros</h2></a>
-            <div class="precios">
-              <p class="price">$3</p> 
-              <p class="impuesto">(Impuestos Incluidos)</p>
-            </div>
-            <button class="btn-add-cart">Añadir al carrito</button>
-          </div>
-        </div>
-        <div class="item">
-          <figure>
-            <img src="./multimedia/articulos-instavet/collar_osito.png" alt="collar_pet_toys_vo">
-          </figure>
-          <div class="info-product">
-            <h2>Collar Osito</h2>
-            <div class="precios">
-              <p class="price">$3</p> 
-              <p class="impuesto">(Impuestos Incluidos)</p>
-            </div>
-            <button class="btn-add-cart">Añadir al carrito</button>
-          </div>
-        </div>
+        <?php } ?>
       </div>
 
 
