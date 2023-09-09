@@ -1,8 +1,26 @@
+<<<<<<< HEAD
+=======
+<?php 
+require "config/database.php";
+$dbm = new Database();
+$con = $dbm->conectar(); // Cambié $db a $dbm
+
+try {
+    $sql = $con->prepare("SELECT id, codigo_producto, nombre, precio FROM medicinas WHERE activo=1 order by nombre");
+    $sql->execute();
+    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
+
+>>>>>>> 6ee78b50dd0e218dd10a0f3cfc7829a5f00c75a1
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Document</title>
 
     <script src="https://www.paypal.com/sdk/js?client-id=AROmjhbl9vKVBkKVf5ZBWARe6Q20fkzj0TzpLigWhKIdJbXcSIdyV6PVf5Dvu6km5JlXTT69yfsaSGUn&currency=USD"></script>
@@ -41,5 +59,242 @@
             }
         }).render("#paypal-button-container");
     </script>
+=======
+    <meta name="description" content="Cuidado y bienestar para tus mascotas en nuestra veterinaria. Ofrecemos servicios profesionales de salud, consultas especializadas y atención amorosa para perros y gatos. ¡Confía en nosotros para mantener a tus amigos peludos felices y saludables! Agenda tu cita hoy mismo.">
+    <title>InstaVet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./multimedia/logos/Logo InstaVet Con Gradiente.png" type="image/x-icon">
+</head>
+<body>
+  <nav class="navegacion">
+    <img src="./multimedia/logos/InstaVet logo lateral.svg" alt="logo_instavet" class="logo">
+    <div class="container">
+        <form action="" class="search-bar">
+            <input type="text" placeholder="Buscar" name="q">
+            <button type="submit"><img src="./multimedia/searchbar/busqueda.png" alt="lupa"></button>
+        </form>
+    </div>
+    <ul class="menu">
+        <div class="caja">
+            <li> <a href="./index.html" class="enlace">Inicio</a> </li>
+        </div>
+        <div class="caja">
+             <li> <a href="./pages/planes_salud.html" class="enlace">Servicios</a> </li>
+        </div>
+        <div class="caja">
+          <li> <a href="./pages/medicina.html" class=enlace>Farmacia</a> </li>
+     </div>
+        <div class="caja">
+            <li> <a class="enlace" href="./pages/catalogo.html">PetShop</a> 
+              <ul class="submenu">
+               <li><a href="#">Accesorios</a></li>
+               <li><a href="#">Alimentos</a></li>
+               <li><a href="#">Camas y Casas</a></li>
+               <li><a href="#">Cosmeticos</a></li>
+               <li><a href="#">Juguetes</a></li>
+               <li><a href="#">Ropa</a></li>
+              </ul>
+            </li>
+        </div>
+        <div class="caja">
+            <li> <a href="./pages/cuenta.html" class="enlace">Mi Cuenta</a> </li>
+        </div>
+    </ul>
+    <div class="container-icon">
+      <div class="container-cart-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="carrito">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+        
+        <div class="count-products">
+          <span id="contador-productos">0
+          </span>
+        </div>
+
+      </div>
+      
+      <div class="container-cart-products hidden-cart">
+        <div class="row-product hidden">
+          <div class="cart-product">
+            <div class="info-cart-product">
+              <span class="cantidad-producto-carrito"></span>
+              <p class="titulo-producto-carrito"></p>
+              <span class="precio-producto-carrito"></span>
+  
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            
+  
+          </div>
+        </div>
+        
+        <div class="cart-total hidden">
+          <h3>Total:</h3>
+          <span class="total-pagar">$0</span>
+        </div>
+        <p class="cart-empty">El carrito está vacío</p>
+
+      </div>
+    </div>
+    
+</nav>
+
+    <header>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="6000">
+                <img src="./multimedia/slides_carrusel/instavet-banner.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="6000">
+                <img src="./multimedia/slides_carrusel/doctora.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="6000">
+                <img src="./multimedia/slides_carrusel//chocolate.svg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </header>
+
+
+
+    <main>
+      
+
+      <p class="titulo">Productos nuevos en InstaVet</p>
+      <div class="container-items">
+        <?php foreach($resultado as $row){ ?>
+        <div class="item">
+          <?php
+           $id = $row['id'];
+           $imagen = "./multimedia/medicinas/" .$id. "/principal.png";
+
+           if(!file_exists($imagen)){
+            $imagen= "./multimedia/nophoto.avif";
+           }
+          ?>
+          <figure>
+            <img src="<?php echo $imagen; ?>">
+          </figure>
+          <div class="info-product">
+            <h2><?php echo $row['nombre'];?></h2>
+            <div class="precios">
+<<<<<<<< HEAD:index.html
+              <p class="price">$5</p> 
+              <p class="impuesto">(Impuestos Incluidos)</p>
+            </div>
+            <button class="btn-add-cart">Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img src="./multimedia/articulos-instavet/collar_pet_toys_verdeo.png" alt="collar_pet_toys_vo">
+          </figure>
+          <div class="info-product">
+            <h2>Collar Reflectivo para Gato</h2>
+            <div class="precios">
+              <p class="price">$2</p> 
+              <p class="impuesto">(Impuestos Incluidos)</p>
+            </div>
+            <button class="btn-add-cart">Añadir al carrito</button>
+            <a href="./index.php">HOLA</a>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img src="./multimedia/articulos-instavet/collar_perro_verde.png" alt="collar_pet_toys_a">
+          </figure>
+          <div class="info-product">
+            <a href="./pages/collar_topraw.html"><h2>Collar TOP PAW para Perros</h2></a>
+            <div class="precios">
+              <p class="price">$3</p> 
+              <p class="impuesto">(Impuestos Incluidos)</p>
+            </div>
+            <button class="btn-add-cart">Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img src="./multimedia/articulos-instavet/collar_osito.png" alt="collar_pet_toys_vo">
+          </figure>
+          <div class="info-product">
+            <h2>Collar Osito</h2>
+            <div class="precios">
+              <p class="price">$3</p> 
+========
+              <p class="price">$<?php echo $row['precio'];?></p> 
+>>>>>>>> 6ee78b50dd0e218dd10a0f3cfc7829a5f00c75a1:index.php
+              <p class="impuesto">(Impuestos Incluidos)</p>
+            </div>
+            <button class="btn-add-cart">Añadir al carrito</button>
+          </div>
+        </div>
+        <?php } ?>
+      </div>
+
+
+    </main>
+
+
+
+
+    <footer class="footer">
+      <div class="container-foot">
+        <div class="footer-row">
+          <div class="footer-links">
+            <h4 class="referencias">Compañía</h4>
+            <ul>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Nuestros servicios</a></li>
+              <li><a href="#">Politica de privacidad</a></li>
+              <li><a href="#">Afiliate</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 class="referencias">Ayuda</h4>
+            <ul>
+              <li><a href="#">Preguntas</a></li>
+              <li><a href="#">Compras</a></li>
+              <li><a href="#">Envios</a></li>
+              <li><a href="#">Estatus de orden</a></li>
+              <li><a href="#">Pago</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 class="referencias">Tienda</h4>
+            <ul>
+              <li><a href="#">Accesorios</a></li>
+              <li><a href="#">Alimentos</a></li>
+              <li><a href="#">Camas y Casas</a></li>
+              <li><a href="#">Juguetes</a></li>
+              <li><a href="#">Ropa</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 class="referencias">Síguenos</h4>
+            <div class="social-link">
+              <a href="https://www.facebook.com/instavet.ec?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/instavet_ec/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@instavet.gye" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    
+>>>>>>> 6ee78b50dd0e218dd10a0f3cfc7829a5f00c75a1
 </body>
 </html>
