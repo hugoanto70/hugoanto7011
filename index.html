@@ -1,65 +1,8 @@
-<<<<<<< HEAD
-=======
-<?php 
-require "config/database.php";
-$dbm = new Database();
-$con = $dbm->conectar(); // Cambié $db a $dbm
-
-try {
-    $sql = $con->prepare("SELECT id, codigo_producto, nombre, precio FROM medicinas WHERE activo=1 order by nombre");
-    $sql->execute();
-    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-?>
-
->>>>>>> 6ee78b50dd0e218dd10a0f3cfc7829a5f00c75a1
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Document</title>
-
-    <script src="https://www.paypal.com/sdk/js?client-id=AROmjhbl9vKVBkKVf5ZBWARe6Q20fkzj0TzpLigWhKIdJbXcSIdyV6PVf5Dvu6km5JlXTT69yfsaSGUn&currency=USD"></script>
-    <script src="app.js"></script>
-    
-</head>
-<body>
-    <div id="paypal-button-container"></div>
-
-    <script>
-        paypal.Buttons({
-            style:{
-                color:"blue",
-                shape: "pill",
-                label: "pay"
-            },
-            createOrder: function(data, actions){
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: 100
-                        }
-                    }]
-
-                });
-            },
-            onApprove: function(data, action){
-                action.order.capture().then(function(detalles){
-                    window.location.href="./index.html"
-
-                });
-            },
-            onCancel: function(data){
-                alert("Pago Cancelado");
-                console.log(data);
-            }
-        }).render("#paypal-button-container");
-    </script>
-=======
     <meta name="description" content="Cuidado y bienestar para tus mascotas en nuestra veterinaria. Ofrecemos servicios profesionales de salud, consultas especializadas y atención amorosa para perros y gatos. ¡Confía en nosotros para mantener a tus amigos peludos felices y saludables! Agenda tu cita hoy mismo.">
     <title>InstaVet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -147,7 +90,7 @@ try {
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="6000">
-                <img src="./multimedia/slides_carrusel/instavet-banner.svg" class="d-block w-100" alt="...">
+                <img src="./multimedia/slides_carrusel/doctor_chito.svg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="6000">
                 <img src="./multimedia/slides_carrusel/doctora.svg" class="d-block w-100" alt="...">
@@ -174,23 +117,13 @@ try {
 
       <p class="titulo">Productos nuevos en InstaVet</p>
       <div class="container-items">
-        <?php foreach($resultado as $row){ ?>
         <div class="item">
-          <?php
-           $id = $row['id'];
-           $imagen = "./multimedia/medicinas/" .$id. "/principal.png";
-
-           if(!file_exists($imagen)){
-            $imagen= "./multimedia/nophoto.avif";
-           }
-          ?>
           <figure>
-            <img src="<?php echo $imagen; ?>">
+            <img src="./multimedia/articulos-instavet/correa-cafe.png" alt="collar_pet_toys_n">
           </figure>
           <div class="info-product">
-            <h2><?php echo $row['nombre'];?></h2>
+            <h2>Collar para Perro</h2>
             <div class="precios">
-<<<<<<<< HEAD:index.html
               <p class="price">$5</p> 
               <p class="impuesto">(Impuestos Incluidos)</p>
             </div>
@@ -208,7 +141,6 @@ try {
               <p class="impuesto">(Impuestos Incluidos)</p>
             </div>
             <button class="btn-add-cart">Añadir al carrito</button>
-            <a href="./index.php">HOLA</a>
           </div>
         </div>
         <div class="item">
@@ -232,15 +164,11 @@ try {
             <h2>Collar Osito</h2>
             <div class="precios">
               <p class="price">$3</p> 
-========
-              <p class="price">$<?php echo $row['precio'];?></p> 
->>>>>>>> 6ee78b50dd0e218dd10a0f3cfc7829a5f00c75a1:index.php
               <p class="impuesto">(Impuestos Incluidos)</p>
             </div>
             <button class="btn-add-cart">Añadir al carrito</button>
           </div>
         </div>
-        <?php } ?>
       </div>
 
 
@@ -295,6 +223,5 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     
->>>>>>> 6ee78b50dd0e218dd10a0f3cfc7829a5f00c75a1
 </body>
 </html>
